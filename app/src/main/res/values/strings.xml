@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Market Scan</string>
+
+    <!-- Navigation & Top Bar -->
+    <string name="tab_signals">SIGNALS</string>
+    <string name="tab_portfolio">PORTFOLIO</string>
+    <string name="tab_trade">TRADE</string>
+    <string name="tab_news">NEWS</string>
+    <string name="tab_setup">SETUP</string>
+
+    <string name="title_signals">Signals</string>
+    <string name="title_portfolio">Portfolio</string>
+    <string name="title_trade">Autotrader</string>
+    <string name="title_news">News</string>
+    <string name="title_setup">Setup</string>
+
+    <string name="action_rescan">RESCAN</string>
+    <string name="status_starting">starting…</string>
+    <string name="status_scanning">scanning…</string>
+
+    <!-- Signals Screen -->
+    <string name="banner_demo_mode">Demo mode — simulated prices. Add Alpaca keys in SETUP for live data.</string>
+    <string name="label_analysed">analysed</string>
+    <string name="label_buy">buy</string>
+    <string name="label_sell">sell</string>
+    <string name="label_hold">hold</string>
+    <string name="filter_all">ALL</string>
+    <string name="filter_watchlist">★ WATCH</string>
+    <string name="filter_buy">BUY</string>
+    <string name="filter_sell">SELL</string>
+    <string name="empty_signals_title">Nothing passes the filters.</string>
+    <string name="empty_signals_subtitle">Strict gates on purpose — no edge beats a fake one.</string>
+
+    <!-- Primary Tracked Symbols Dashboard -->
+    <string name="dashboard_tracked_title">TRACKED SYMBOLS DASHBOARD</string>
+    <string name="dashboard_tracked_subtitle_custom">%1$d tracked · regime &amp; AI news verdicts</string>
+    <string name="dashboard_tracked_subtitle_top">Top %1$d symbols · regime &amp; AI news verdicts</string>
+    <string name="dashboard_metric_ai_bull">AI BULL</string>
+    <string name="dashboard_metric_ai_bear">AI BEAR</string>
+    <string name="dashboard_metric_vetoed">VETOED</string>
+    <string name="dashboard_metric_scored">SCORED</string>
+    <string name="dashboard_empty_title">No symbols match this verdict filter.</string>
+    <string name="dashboard_empty_subtitle">Star tickers to track them here or run a live AI veto screen.</string>
+
+    <!-- Card & Detail Labels -->
+    <string name="label_stop">STOP</string>
+    <string name="label_target">TARGET</string>
+    <string name="label_rr_net">R:RNET</string>
+    <string name="label_conv">CONV</string>
+    <string name="label_entry">ENTRY</string>
+    <string name="label_net_rr_size">NET R:R / SIZE</string>
+    <string name="label_cost">COST</string>
+    <string name="label_factors">FACTORS</string>
+    <string name="label_why">WHY</string>
+    <string name="label_catalyst">CATALYST</string>
+    <string name="label_disclaimer_scores">Scores measure indicator agreement, not probability. Not investment advice.</string>
+
+    <!-- Trade Screen -->
+    <string name="label_paper_equity">PAPER EQUITY</string>
+    <string name="label_since_open">since open</string>
+    <string name="label_cash">CASH</string>
+    <string name="label_trades_today">TRADES TODAY</string>
+    <string name="label_position">POSITION</string>
+    <string name="label_unrealized">UNREALIZED</string>
+    <string name="label_qty">QTY</string>
+    <string name="banner_simulation">SIMULATION — no real money. Fills use last price with zero slippage, which flatters results.</string>
+    <string name="banner_halted">Halted: daily loss limit (3% of equity) reached. No new entries until tomorrow.</string>
+    <string name="action_start_bot">START AUTOTRADER · $10</string>
+    <string name="action_stop_bot">STOP AUTOTRADER</string>
+    <string name="action_reset_bot">RESET PAPER ACCOUNT</string>
+    <string name="label_active_rules">ACTIVE RULES</string>
+    <string name="label_trade_log">TRADE LOG</string>
+    <string name="empty_trade_log">No trades yet.</string>
+    <string name="flat_running">Flat. Waiting for a signal that clears every gate.</string>
+    <string name="flat_stopped">Flat. Bot is stopped.</string>
+
+    <!-- Advisor Layer -->
+    <string name="label_advisor_layer">LLM ADVISOR LAYER</string>
+    <string name="advisor_status_veto_journal">VETO + JOURNAL</string>
+    <string name="advisor_status_journal_only">JOURNAL ONLY</string>
+    <string name="advisor_status_secrets_needed">OFF · SECRETS</string>
+    <string name="advisor_three_rules">1. NOT IN ENTRY  ·  2. VETO ONLY (≥0.70)  ·  3. LOGGED AUDIT</string>
+    <string name="advisor_label_model">MODEL</string>
+    <string name="advisor_label_budget">BUDGET</string>
+    <string name="advisor_label_vetoes">VETOES</string>
+    <string name="advisor_setup_hint">Configure LLM_BASE_URL, LLM_API_KEY, and LLM_MODEL in the Secrets panel to enable veto screening and journal review. Optional FINNHUB_KEY enables 18h headline screening.</string>
+    <string name="advisor_finnhub_optional_hint">No FINNHUB_KEY set — veto returns NONE by design (no news beats invented news). Journal review is active.</string>
+    <string name="advisor_section_veto">HEADLINE VETO CHECK (18H WINDOW)</string>
+    <string name="advisor_section_population">RULE #3 POPULATION AUDIT (LLM VERDICT)</string>
+    <string name="advisor_population_empty">Close trades to compare llm=clear vs llm=off populations.</string>
+    <string name="advisor_section_journal">QUANTITATIVE BOOK JOURNAL (LAST 25 CLOSED)</string>
+    <string name="advisor_action_run_journal">RUN JOURNAL REVIEW</string>
+
+    <!-- News Screen -->
+    <string name="banner_demo_news">Headlines below are simulated until Alpaca keys are added.</string>
+    <string name="label_market_tape">MARKET TAPE</string>
+    <string name="empty_market_tape">No headlines fetched in this scan.</string>
+    <string name="empty_news_catalysts">No scored catalysts in this scan.\nAdd a Gemini key in SETUP to score headlines.</string>
+    <string name="news_decay_note">Older headlines count less — a catalyst decays with an 18-hour half-life. Sentiment is not a prediction.</string>
+    <string name="finnhub_feed_title">FINNHUB AI CATALYST FEED</string>
+    <string name="finnhub_status_live">FINNHUB LIVE</string>
+    <string name="finnhub_status_key_needed">FINNHUB KEY NEEDED</string>
+    <string name="finnhub_setup_prompt">Add your Finnhub API key in Settings (gear icon) or the Setup tab to stream live financial news articles and annotate each headline with an AI-generated catalyst score.</string>
+    <string name="finnhub_refresh_desc">Refresh Finnhub financial news and AI catalyst scores</string>
+    <string name="finnhub_search_placeholder">Filter articles by ticker, headline, or source…</string>
+    <string name="finnhub_metric_articles">ARTICLES</string>
+    <string name="finnhub_metric_bull">BULLISH</string>
+    <string name="finnhub_metric_bear">BEARISH</string>
+    <string name="finnhub_metric_high">HIGH IMPACT</string>
+    <string name="finnhub_empty_filtered_title">No articles match your filter.</string>
+    <string name="finnhub_empty_filtered_subtitle">Clear the search query or switch to ALL to view recent financial news.</string>
+    <string name="finnhub_read_article">READ ARTICLE</string>
+    <string name="finnhub_open_article_desc">Open full news article in browser</string>
+    <string name="finnhub_loading_text">Fetching Finnhub articles &amp; calculating AI catalyst scores…</string>
+    <string name="finnhub_retry_action">RETRY FINNHUB</string>
+    <string name="finnhub_section_scanned_fallback">SCANNED CATALYST HEADLINES</string>
+
+    <!-- Setup Screen -->
+    <string name="label_alpaca_id">ALPACA KEY ID</string>
+    <string name="label_alpaca_secret">ALPACA SECRET</string>
+    <string name="label_gemini_key">GEMINI API KEY (optional — news scoring)</string>
+    <string name="label_finnhub_key">FINNHUB API KEY (optional — live financial news)</string>
+    <string name="label_data_mode">DATA MODE</string>
+    <string name="mode_demo">Demo — simulated market</string>
+    <string name="mode_live">Live — use Alpaca keys</string>
+    <string name="label_paper_account">PAPER ACCOUNT SIZE ($)</string>
+    <string name="label_risk_pct">RISK PER TRADE (%)</string>
+    <string name="label_watchlist">WATCHLIST (comma separated, added to universe)</string>
+    <string name="action_save_rescan">SAVE &amp; RESCAN</string>
+    <string name="label_how_to_keys">HOW TO GET KEYS</string>
+    <string name="label_what_this_is">WHAT THIS IS</string>
+
+    <!-- Settings Menu & Threshold Alerts -->
+    <string name="settings_menu_content_desc">Open settings menu</string>
+    <string name="threshold_settings_title">Settings</string>
+    <string name="threshold_settings_subtitle">Switch Light &amp; Dark Material 3 theme and configure regime or AI news threshold alerts.</string>
+    <string name="theme_section_title">APPEARANCE &amp; THEME</string>
+    <string name="theme_toggle_title">Dark Material 3 Mode</string>
+    <string name="theme_toggle_desc_dark">Dark terminal palette active across all screens.</string>
+    <string name="theme_toggle_desc_light">Light daylight Material 3 palette active across all screens.</string>
+    <string name="theme_badge_dark">DARK M3</string>
+    <string name="theme_badge_light">LIGHT M3</string>
+    <string name="theme_option_light">Light Mode</string>
+    <string name="theme_option_dark">Dark Mode</string>
+    <string name="theme_toggle_content_desc">Toggle between Light and Dark Material 3 theme</string>
+    <string name="finnhub_settings_section_title">FINNHUB API KEY</string>
+    <string name="finnhub_settings_configured">CONFIGURED</string>
+    <string name="finnhub_settings_not_set">NOT SET</string>
+    <string name="finnhub_settings_desc">Used to stream live market &amp; company financial news articles for AI catalyst scoring. Stored encrypted on device.</string>
+    <string name="finnhub_settings_placeholder">Enter Finnhub API key (finnhub.io)</string>
+    <string name="finnhub_settings_save">SAVE KEY</string>
+    <string name="finnhub_settings_clear">CLEAR</string>
+    <string name="finnhub_settings_show_desc">Show Finnhub API key</string>
+    <string name="finnhub_settings_hide_desc">Hide Finnhub API key</string>
+    <string name="threshold_section_title">THRESHOLD ALERTS</string>
+    <string name="threshold_status_active">ARMED</string>
+    <string name="threshold_status_paused">PAUSED</string>
+    <string name="threshold_notif_banner">Notifications are currently disabled. Grant permission to receive push alerts.</string>
+    <string name="threshold_notif_allow">ALLOW</string>
+    <string name="threshold_regime_header">MARKET REGIME ALERTS</string>
+    <string name="threshold_regime_desc">Alert when the market enters any selected regime state.</string>
+    <string name="threshold_panic_guard_title">Panic Guard Alert</string>
+    <string name="threshold_panic_guard_desc">Notify immediately when drawdown &amp; volatility trigger the 50% exposure cut.</string>
+    <string name="threshold_ai_header">AI NEWS SCORE CHANGE ALERTS</string>
+    <string name="threshold_ai_desc">Alert on sharp AI verdict swings, extreme sentiment crossings, or LLM vetoes.</string>
+    <string name="threshold_ai_delta_label">Score Swing Delta</string>
+    <string name="threshold_ai_extreme_label">Extreme Score Crossing</string>
+    <string name="threshold_advisor_veto_title">Instant Advisor VETO Alert</string>
+    <string name="threshold_advisor_veto_desc">Notify immediately when the LLM Advisor vetoes a symbol on adverse news.</string>
+    <string name="threshold_watchlist_only_title">Watchlist Symbols Only</string>
+    <string name="threshold_watchlist_only_desc">Scope AI news score alerts strictly to your starred watchlist tickers.</string>
+    <string name="threshold_action_test">TEST ALERT</string>
+    <string name="threshold_action_clear_log">CLEAR LOG</string>
+    <string name="threshold_recent_header">RECENT TRIGGERED ALERTS</string>
+    <string name="threshold_close_desc">Close settings menu</string>
+
+    <!-- AI Providers & Models Hub (ModelRadar) -->
+    <string name="ai_hub_section_title">AI PROVIDERS &amp; MODELS</string>
+    <string name="ai_hub_sheet_title">AI Model Radar</string>
+    <string name="ai_hub_sheet_subtitle">Turn each AI ON/OFF, browse Free &amp; Paid models, and probe live replies.</string>
+    <string name="ai_hub_close_desc">Close AI Model Radar</string>
+    <string name="ai_hub_manage_models">BROWSE FREE &amp; PAID MODELS</string>
+    <string name="ai_hub_active_badge">ACTIVE</string>
+    <string name="ai_hub_set_active">USE</string>
+    <string name="ai_hub_off_badge">OFF</string>
+    <string name="ai_hub_key_set">KEY SET</string>
+    <string name="ai_hub_key_public">PUBLIC LIST</string>
+    <string name="ai_hub_key_needed">NO KEY</string>
+    <string name="ai_hub_api_key_button">API KEY</string>
+    <string name="ai_hub_save_key">SAVE</string>
+    <string name="ai_hub_clear_key">CLEAR</string>
+    <string name="ai_hub_sync_catalog">SYNC CATALOG</string>
+    <string name="ai_hub_syncing">SYNCING…</string>
+    <string name="ai_hub_best_free">BEST FREE</string>
+    <string name="ai_hub_best_paid">BEST PAID</string>
+    <string name="ai_hub_search_placeholder">Search models (glm, deepseek, llama, gemini)…</string>
+    <string name="ai_hub_probe">PROBE</string>
+    <string name="ai_hub_probing">PROBING…</string>
+    <string name="ai_hub_use_model">USE MODEL</string>
+    <string name="ai_hub_selected_model">SELECTED</string>
+    <string name="ai_hub_empty_title">No matching chat models</string>
+    <string name="ai_hub_empty_subtitle">Tap Sync Catalog to pull live Free &amp; Paid models from OpenRouter and your enabled providers.</string>
+    <string name="ai_hub_price_honesty_note">Prices per 1M tokens · ? = provider omits pricing · ~inferred = name heuristic</string>
+    <string name="ai_hub_no_model_selected">No model picked — tap Browse to choose Free or Paid</string>
+    <string name="ai_hub_all_off_banner">All AI providers are turned OFF. Turn any provider ON to enable AI news scoring, vetoes, and journal reviews.</string>
+    <string name="ai_hub_toggle_provider_desc">Toggle %1$s AI provider on or off</string>
+    <string name="ai_hub_show_key_desc">Show API key</string>
+    <string name="ai_hub_hide_key_desc">Hide API key</string>
+    <string name="ai_hub_clear_search_desc">Clear model search</string>
+
+    <!-- Quantitative Equity Signal Scanner -->
+    <string name="quant_scanner_title">QUANT SIGNAL SCANNER</string>
+    <string name="quant_scanner_live_badge">LIVE · 2.5S</string>
+    <string name="quant_scanner_paused_badge">PAUSED</string>
+    <string name="quant_scanner_source_live">ALPACA LIVE</string>
+    <string name="quant_scanner_source_demo">DEMO FEED</string>
+    <string name="quant_scanner_input_placeholder">Fetch tickers (e.g. NVDA, AAPL, AMD)…</string>
+    <string name="quant_scanner_action_scan">SCAN</string>
+    <string name="quant_scanner_refresh_desc">Fetch fresh stock data and recompute quantitative signals</string>
+    <string name="quant_scanner_stream_toggle_desc">Toggle real-time quote stream for quantitative signals</string>
+    <string name="quant_scanner_clear_input_desc">Clear ticker input</string>
+    <string name="quant_scanner_metric_scanned">SCANNED</string>
+    <string name="quant_scanner_metric_buys">BUY</string>
+    <string name="quant_scanner_metric_sells">SELL</string>
+    <string name="quant_scanner_metric_avg_rr">AVG R:R</string>
+    <string name="quant_scanner_all_universe">ALL UNIVERSE</string>
+    <string name="quant_scanner_conv_all">ANY CONV</string>
+    <string name="quant_scanner_conv_med">CONV ≥ 0.6</string>
+    <string name="quant_scanner_conv_high">CONV ≥ 1.2</string>
+    <string name="quant_scanner_show_all">SHOW ALL %1$d LIVE SIGNALS</string>
+    <string name="quant_scanner_show_less">COLLAPSE SIGNALS</string>
+    <string name="quant_scanner_empty_title">No live signals match your filters.</string>
+    <string name="quant_scanner_empty_subtitle">Lower the conviction gate, switch to ALL, or scan custom tickers above.</string>
+    <string name="quant_scanner_retry">RETRY</string>
+
+    <!-- Live Ticker Indicators Screen (RSI & MA Crossover) -->
+    <string name="ticker_screen_title">Live Ticker Signals</string>
+    <string name="ticker_screen_subtitle">Real-time API prices · RSI(14) &amp; EMA 9/21 Crossover</string>
+    <string name="ticker_open_button_desc">Open Live Ticker Signals screen with RSI and Moving Average indicators</string>
+    <string name="ticker_back_desc">Return to Signals dashboard</string>
+    <string name="ticker_refresh_desc">Refresh real-time prices and quantitative indicators from API</string>
+    <string name="ticker_auto_poll_desc">Toggle 10-second live API auto-refresh</string>
+    <string name="ticker_launcher_badge">LIVE API</string>
+    <string name="ticker_launcher_title">TICKER SIGNAL TABLE · RSI &amp; MA CROSS</string>
+    <string name="ticker_launcher_subtitle">View real-time stock prices with a dedicated Signal column powered by Wilder RSI(14) and EMA 9/21 crossovers.</string>
+    <string name="ticker_launcher_cta">OPEN</string>
+    <string name="ticker_col_ticker">TICKER</string>
+    <string name="ticker_col_price">PRICE</string>
+    <string name="ticker_col_signal">SIGNAL</string>
+    <string name="ticker_add_placeholder">Add ticker via API (e.g. COIN, AVGO, NFLX)…</string>
+    <string name="ticker_add_action">ADD</string>
+    <string name="ticker_search_placeholder">Filter symbols or signals…</string>
+    <string name="ticker_clear_search_desc">Clear ticker filter</string>
+    <string name="ticker_metric_tracked">TICKERS</string>
+    <string name="ticker_metric_bullish">BULLISH</string>
+    <string name="ticker_metric_bearish">BEARISH</string>
+    <string name="ticker_metric_extremes">EXTREMES</string>
+    <string name="ticker_metric_avg_rsi">AVG RSI</string>
+    <string name="ticker_loading_label">Fetching live prices &amp; computing RSI(14) / EMA 9–21 crossovers…</string>
+    <string name="ticker_error_title">Unable to load ticker feed</string>
+    <string name="ticker_empty_title">No tickers match this filter.</string>
+    <string name="ticker_empty_subtitle">Switch to ALL or add a new ticker symbol above to fetch live indicator data.</string>
+    <string name="ticker_action_retry">RETRY API</string>
+    <string name="ticker_action_open_detail">FULL ANALYSIS</string>
+    <string name="ticker_action_remove">REMOVE</string>
+    <string name="ticker_auto_live">AUTO 10S</string>
+    <string name="ticker_auto_paused">PAUSED</string>
+
+    <!-- AI Investment Council (council.py) -->
+    <string name="council_title">AI Investment Council</string>
+    <string name="council_subtitle">Multi-model committee · BUY / SELL / HOLD · 3 hard rules</string>
+    <string name="council_rules_strip">1. size_mult ≤ 1.0  ·  2. Quorum ≥ 2 &amp; Families ≥ 2  ·  3. Ledger Audited</string>
+    <string name="council_back_desc">Close AI Investment Council screen</string>
+    <string name="council_open_keys_desc">Configure provider API keys in AI Model Radar</string>
+    <string name="council_launcher_badge">MULTI-LLM</string>
+    <string name="council_launcher_title">AI INVESTMENT COUNCIL · BUY / SELL / HOLD</string>
+    <string name="council_launcher_subtitle">Query diverse model families in parallel with hard quorum, family-diversity, and size_mult ≤ 1.0 gates plus outcome scoring.</string>
+    <string name="council_launcher_cta">CONVENE</string>
+    <string name="council_symbol_placeholder">Ticker symbol (e.g. AAPL, NVDA, MSFT)…</string>
+    <string name="council_action_convene">CONVENE COUNCIL</string>
+    <string name="council_action_deliberating">DELIBERATING…</string>
+    <string name="council_action_resolve">RESOLVE OUTCOMES</string>
+    <string name="council_action_resolving">RESOLVING…</string>
+    <string name="council_action_clear_ledger">CLEAR LEDGER</string>
+    <string name="council_action_auto_panel">AUTO-BUILD DIVERSE PANEL</string>
+    <string name="council_action_open_keys">AI KEYS HUB</string>
+    <string name="council_action_add_member">ADD MEMBER</string>
+    <string name="council_model_input_placeholder">Model ID (e.g. deepseek-chat, glm-5.3, qwen3-235b:free)…</string>
+    <string name="council_family_warning">WARNING: Fewer than 2 distinct model families — correlated error, not independent consensus. Every decision will degrade to HOLD (size_mult 0.0).</string>
+    <string name="council_degraded_badge">DEGRADED</string>
+    <string name="council_empty_decide_title">Ready to convene the committee</string>
+    <string name="council_empty_decide_subtitle">Pick any ticker above and tap Convene Council to collect parallel JSON votes across distinct LLM families.</string>
+    <string name="council_empty_ledger_title">Council ledger is empty</string>
+    <string name="council_empty_ledger_subtitle">Every deliberation is recorded with its full vote breakdown so you can score accuracy against actual subsequent prices.</string>
+    <string name="council_empty_stats_title">No scored outcomes yet</string>
+    <string name="council_empty_stats_subtitle">Run Resolve Outcomes in the Ledger tab after prices move to measure per-member accuracy and calibrate weights (0.50–2.00).</string>
+    <string name="council_metric_score">SCORE</string>
+    <string name="council_metric_size">SIZE MULT</string>
+    <string name="council_metric_agree">AGREE</string>
+    <string name="council_metric_families">FAMILIES</string>
+    <string name="council_remove_member_desc">Remove council member</string>
+    <string name="council_ask_button">ASK COUNCIL</string>
+
+    <!-- AI News Catalyst Scorer (All Implemented AIs) -->
+    <string name="catalyst_service_title">AI NEWS CATALYST SCORER</string>
+    <string name="catalyst_service_refresh_desc">Fetch latest financial news and score impact across all enabled AIs</string>
+    <string name="catalyst_service_ticker_placeholder">Score tickers (e.g. NVDA, AAPL, TSLA)…</string>
+    <string name="catalyst_service_clear_input_desc">Clear ticker input</string>
+    <string name="catalyst_service_action_score">SCORE</string>
+    <string name="catalyst_service_loading">Fetching financial headlines &amp; scoring across all enabled AIs…</string>
+    <string name="catalyst_service_retry">RETRY</string>
+    <string name="catalyst_service_empty">Tap SCORE or refresh to fetch financial headlines and compute multi-AI Impact Ratings.</string>
+    <string name="catalyst_service_empty_filtered">No tickers match this Impact Level filter.</string>
+    <string name="catalyst_service_expand_desc">Expand multi-AI verdicts and scored headlines</string>
+    <string name="catalyst_service_collapse_desc">Collapse multi-AI verdicts and scored headlines</string>
+    <string name="catalyst_service_headlines_header">SCORED HEADLINES (%1$d · %2$s)</string>
+    <string name="catalyst_service_ai_roster_header">IMPLEMENTED AI ENGINES (%1$d/%2$d ACTIVE)</string>
+    <string name="catalyst_service_open_ai_hub">AI HUB</string>
+    <string name="catalyst_service_open_ai_hub_desc">Configure API keys and models for all 5 AI engines</string>
+    <string name="catalyst_service_multi_ai_verdicts_header">PER-AI IMPACT VERDICTS (%1$d AIs · %2$d%% AGREE)</string>
+    <string name="catalyst_service_agreement_pill">%1$d AIs · %2$d%% AGREE</string>
+    <string name="catalyst_impact_critical">CRITICAL</string>
+    <string name="catalyst_impact_high">HIGH</string>
+    <string name="catalyst_impact_moderate">MODERATE</string>
+    <string name="catalyst_impact_low">LOW</string>
+
+    <!-- Paper Trading Equity Curve Dashboard -->
+    <string name="equity_dashboard_title">PAPER EQUITY CURVE</string>
+    <string name="equity_dashboard_status_running">BOT RUNNING</string>
+    <string name="equity_dashboard_status_tracking">LIVE CURVE</string>
+    <string name="equity_dashboard_live_now">Live mark-to-market</string>
+    <string name="equity_dashboard_reset_inspect">RESET</string>
+    <string name="equity_dashboard_scrub_hint">Drag chart to inspect</string>
+    <string name="equity_dashboard_overlay_hwm">PEAK HWM</string>
+    <string name="equity_dashboard_overlay_fills">FILLS</string>
+    <string name="equity_dashboard_axis_now">Now</string>
+    <string name="equity_dashboard_kpi_return">NET RETURN</string>
+    <string name="equity_dashboard_kpi_peak">PEAK EQUITY</string>
+    <string name="equity_dashboard_kpi_max_dd">MAX DD</string>
+    <string name="equity_dashboard_kpi_win_rate">WIN RATE</string>
+    <string name="equity_dashboard_kpi_profit_factor">PROFIT FACTOR</string>
+    <string name="equity_dashboard_kpi_sharpe">SHARPE EST</string>
+
+    <!-- Background Catalyst & Market Move Worker -->
+    <string name="bg_monitor_title">BACKGROUND CATALYST WORKER</string>
+    <string name="bg_monitor_subtitle">Periodically checks high-impact catalyst scores &amp; significant market moves and sends local notifications.</string>
+    <string name="bg_monitor_status_active">ACTIVE · %1$dM</string>
+    <string name="bg_monitor_status_paused">PAUSED</string>
+    <string name="bg_monitor_status_running">CHECKING…</string>
+    <string name="bg_monitor_permission_needed">Allow notifications so the background worker can alert you on high-impact moves.</string>
+    <string name="bg_monitor_interval_label">CHECK EVERY</string>
+    <string name="bg_monitor_score_threshold_label">CATALYST |SCORE|</string>
+    <string name="bg_monitor_move_threshold_label">PRICE MOVE</string>
+    <string name="bg_monitor_watchlist_only">★ WATCHLIST ONLY</string>
+    <string name="bg_monitor_run_now">CHECK NOW</string>
+    <string name="bg_monitor_checking_now">CHECKING…</string>
+    <string name="bg_monitor_last_run_meta">LAST SWEEP %1$s · %2$d TICKERS · %3$d ALERTS</string>
+
+    <!-- DataStore Favorite Watchlist & Finnhub Quote Snippets -->
+    <string name="watchlist_card_title">FAVORITE WATCHLIST · FINNHUB</string>
+    <string name="watchlist_poll_live">LIVE 15S</string>
+    <string name="watchlist_poll_paused">PAUSED</string>
+    <string name="watchlist_refresh_desc">Refresh Finnhub real-time watchlist quotes</string>
+    <string name="watchlist_input_placeholder">Add favorite tickers (e.g. NVDA, PLTR, COIN)…</string>
+    <string name="watchlist_clear_input_desc">Clear watchlist ticker input</string>
+    <string name="watchlist_action_add">ADD</string>
+    <string name="watchlist_finnhub_key_prompt">Add a Finnhub API key in Settings to stream direct Finnhub real-time quotes.</string>
+    <string name="watchlist_action_add_key">ADD KEY</string>
+    <string name="watchlist_empty_state">No favorite tickers saved yet. Add a ticker above to persist it in DataStore and stream real-time quote snippets.</string>
+    <string name="watchlist_fetching_quote">Fetching live quote…</string>
+    <string name="watchlist_quote_pending">Tap refresh to load quote</string>
+    <string name="watchlist_remove_desc">Remove %1$s from favorite watchlist</string>
+
+    <!-- Room Paper Trading Holdings Module -->
+    <string name="paper_holdings_title">PAPER HOLDINGS · ROOM DB</string>
+    <string name="paper_holdings_subtitle">Local Room holdings · dummy buy prices vs real-time quotes</string>
+    <string name="paper_holdings_poll_live">LIVE 15S</string>
+    <string name="paper_holdings_poll_paused">PAUSED</string>
+    <string name="paper_holdings_refresh_desc">Refresh real-time quotes for Room paper holdings</string>
+    <string name="paper_holdings_total_value">SIMULATED HOLDINGS VALUE</string>
+    <string name="paper_holdings_cost_basis">COST BASIS</string>
+    <string name="paper_holdings_day_pnl">TODAY P&amp;L</string>
+    <string name="paper_holdings_live_priced">LIVE QUOTES</string>
+    <string name="paper_holdings_action_add_lot">ADD HOLDING</string>
+    <string name="paper_holdings_action_close_form">CLOSE FORM</string>
+    <string name="paper_holdings_action_seed">LOAD 3 DUMMY LOTS</string>
+    <string name="paper_holdings_action_clear_all">CLEAR</string>
+    <string name="paper_holdings_action_cancel">CANCEL</string>
+    <string name="paper_holdings_action_live_discount">LIVE −3%</string>
+    <string name="paper_holdings_action_save_room">SAVE TO ROOM DB</string>
+    <string name="paper_holdings_action_update_room">UPDATE HOLDING</string>
+    <string name="paper_holdings_action_edit">EDIT BUY PX</string>
+    <string name="paper_holdings_action_signal">SIGNAL</string>
+    <string name="paper_holdings_delete_desc">Remove %1$s paper holding from Room database</string>
+    <string name="paper_holdings_form_add_title">NEW PAPER HOLDING (ROOM)</string>
+    <string name="paper_holdings_form_edit_title">EDIT %1$s DUMMY ENTRY</string>
+    <string name="paper_holdings_field_ticker">Ticker</string>
+    <string name="paper_holdings_field_shares">Shares</string>
+    <string name="paper_holdings_field_buy_price">Dummy Buy Price</string>
+    <string name="paper_holdings_field_notes">Note (optional)</string>
+    <string name="paper_holdings_field_notes_hint">e.g. Breakout dummy fill</string>
+    <string name="paper_holdings_col_dummy_buy">DUMMY BUY</string>
+    <string name="paper_holdings_col_live_px">LIVE TICK</string>
+    <string name="paper_holdings_col_mkt_val">MKT VALUE</string>
+    <string name="paper_holdings_empty_title">No local paper holdings yet</string>
+    <string name="paper_holdings_empty_subtitle">Add a ticker with any dummy purchase price or load 3 starter lots to track simulated P&amp;L against live market quotes.</string>
+
+    <!-- 30-Day Daily P&L Performance Chart (Room-Backed) -->
+    <string name="daily_pnl_chart_title">30-DAY DAILY P&amp;L PERFORMANCE</string>
+    <string name="daily_pnl_chart_subtitle_active">%1$d daily snapshots stored in Room · holdings mark-to-market</string>
+    <string name="daily_pnl_chart_subtitle_empty">Room-backed 30-day simulated daily P&amp;L bar &amp; cumulative chart</string>
+    <string name="daily_pnl_chart_badge_30d">30D ROOM</string>
+    <string name="daily_pnl_chart_refresh_desc">Recalculate 30-day daily P&amp;L snapshots in Room</string>
+    <string name="daily_pnl_chart_empty_title">No 30-day P&amp;L history yet</string>
+    <string name="daily_pnl_chart_empty_subtitle">Add a paper holding or load 3 starter lots to compute and store 30 days of daily simulated P&amp;L in Room.</string>
+    <string name="daily_pnl_chart_scrub_hint">Drag or tap bars to inspect</string>
+    <string name="daily_pnl_chart_cumul_label">CUMULATIVE P&amp;L</string>
+    <string name="daily_pnl_chart_accessibility_desc">30-day daily P&amp;L chart with %1$d days and net P&amp;L of %2$s</string>
+    <string name="daily_pnl_legend_gain">Daily Gain</string>
+    <string name="daily_pnl_legend_loss">Daily Loss</string>
+    <string name="daily_pnl_legend_cumul">Cumulative P&amp;L</string>
+    <string name="daily_pnl_kpi_net_30d">30D NET</string>
+    <string name="daily_pnl_kpi_best_day">BEST DAY</string>
+    <string name="daily_pnl_kpi_worst_day">WORST DAY</string>
+    <string name="daily_pnl_kpi_green_days">GREEN DAYS</string>
+
+    <!-- Stock Market / Crypto 24/7 Mode Switcher & Kraken/CryptoPanic Guard -->
+    <string name="market_mode_stocks">Stock Market</string>
+    <string name="market_mode_crypto">Crypto 24/7</string>
+    <string name="market_mode_stocks_short">STOCKS</string>
+    <string name="market_mode_crypto_short">CRYPTO</string>
+    <string name="market_mode_toggle_desc">Switch market mode to %1$s</string>
+    <string name="market_mode_swap_to_crypto">SWAP TO 24/7 CRYPTO PORTFOLIO</string>
+    <string name="market_mode_swap_to_stocks">SWAP TO STOCK MARKET PORTFOLIO</string>
+    <string name="crypto_247_badge">KRAKEN 24/7</string>
+    <string name="crypto_sim_badge">24/7 CRYPTO SIM</string>
+    <string name="stock_sim_badge">STOCK SIMULATOR</string>
+    <string name="portfolio_title_stocks">STOCK PORTFOLIO VALUE</string>
+    <string name="portfolio_title_crypto">CRYPTO 24/7 PORTFOLIO VALUE</string>
+    <string name="action_start_crypto_bot">START 24/7 CRYPTO AUTOTRADER · %1$s</string>
+    <string name="action_start_stock_bot">START AUTOTRADER · %1$s</string>
+    <string name="action_stop_crypto_bot">STOP 24/7 CRYPTO AUTOTRADER</string>
+    <string name="action_reset_crypto_bot">RESET CRYPTO PAPER ACCOUNT</string>
+    <string name="banner_crypto_public_feed">Kraken Spot &amp; Futures public 24/7 feeds active — no exchange API key needed. Paper trading only (zero real-money orders).</string>
+    <string name="banner_crypto_demo_fallback">Kraken public feed temporarily unreachable — showing simulated 24/7 crypto prices.</string>
+    <string name="crypto_guard_title">KRAKEN PERPS FUNDING &amp; CRYPTOPANIC GUARD</string>
+    <string name="crypto_guard_subtitle_ready">%1$d funding samples stored (≥30 ready for crowding percentiles) · %2$d blocked · %3$d size-reduced. Guard filters entries only and never panic-sells held positions.</string>
+    <string name="crypto_guard_subtitle_warming">Collecting Kraken perpetual funding history (%1$d/30 samples) — crowding percentile stays neutral until ≥30 points. CryptoPanic news guard active now.</string>
+    <string name="crypto_guard_empty">Tap RESCAN to pull Kraken Futures perpetual funding, open interest, basis, and CryptoPanic Guard verdicts.</string>
+    <string name="crypto_news_feed_title">CRYPTOPANIC 24/7 CATALYST GUARD FEED</string>
+    <string name="crypto_news_status_live">CRYPTOPANIC 24/7</string>
+    <string name="crypto_news_setup_note">CryptoPanic public feed works automatically without a token. Add an optional CryptoPanic Auth Token in Setup for higher rate limits and Pro endpoints.</string>
+    <string name="label_cryptopanic_token">CRYPTOPANIC AUTH TOKEN (optional — higher crypto news limits)</string>
+    <string name="cryptopanic_token_show_desc">Show CryptoPanic auth token</string>
+    <string name="cryptopanic_token_hide_desc">Hide CryptoPanic auth token</string>
+
+    <!-- Equity Scanner Set Alert & AI Signal Change Push Alerts -->
+    <string name="quant_scanner_set_alert">Set Alert</string>
+    <string name="quant_scanner_set_alert_count">Set Alert (%1$d)</string>
+    <string name="quant_scanner_alert_on">Alert On</string>
+    <string name="quant_scanner_alert_on_count">Alerts (%1$d)</string>
+    <string name="quant_scanner_set_alert_desc">Set push notification alert for %1$s price threshold or AI signal change</string>
+    <string name="set_alert_sheet_title">Set Alert</string>
+    <string name="set_alert_sheet_subtitle">Push alerts for price thresholds &amp; AI signal changes</string>
+    <string name="set_alert_tab_price">PRICE THRESHOLD</string>
+    <string name="set_alert_tab_signal">AI SIGNAL CHANGE</string>
+    <string name="set_alert_signal_ticker_title">AI SIGNAL CHANGE PUSH</string>
+    <string name="set_alert_signal_ticker_desc">Notify immediately when %1$s flips between BUY, SELL, or HOLD on scan updates.</string>
+    <string name="set_alert_signal_global_news_title">AI News Catalyst Shift Alerts</string>
+    <string name="set_alert_signal_global_news_desc">Push alert when AI headline sentiment swings sharply on scanned equities.</string>
+    <string name="set_alert_signal_list_header">AI SIGNAL WATCHES</string>
+    <string name="set_alert_signal_empty">Toggle AI Signal Change above for any equity to receive instant push notifications on signal flips.</string>
+    <string name="set_alert_paused_badge">PAUSED</string>
+    <string name="set_alert_armed_badge">ARMED</string>
+
+    <!-- Signals Sub-Tabs -->
+    <string name="signals_subtab_scanner">SCANNER</string>
+    <string name="signals_subtab_watchlist">WATCHLIST</string>
+    <string name="signals_subtab_regime">REGIME</string>
+
+    <!-- Simulation Disclaimer & Setup Readiness Checklist -->
+    <string name="sim_disclaimer_badge">PAPER TRADING SIMULATOR</string>
+    <string name="sim_disclaimer_title">Simulated Trading &amp; Setup Status</string>
+    <string name="sim_disclaimer_body">All portfolios, holdings, and autotrader actions use virtual paper funds for research and education only. No real-money orders are placed and nothing in this app is financial advice.</string>
+    <string name="sim_checklist_header">LIVE FEEDS &amp; SETUP CHECKLIST</string>
+    <string name="sim_checklist_ready">%1$d/%2$d READY</string>
+    <string name="sim_disclaimer_open_setup">Open Setup</string>
+    <string name="sim_disclaimer_continue">Continue</string>
+    <string name="sim_footer_notice">Simulated Paper Trading · Educational Only · Not Financial Advice</string>
+
+    <!-- CryptoTrader 2.0 Risk Guards & Grid Backtester -->
+    <string name="crypto2_title">CRYPTOTRADER 2.0 · RISK GUARDS &amp; BACKTEST</string>
+    <string name="crypto2_subtitle">BTC regime scaler, USDT/USDC peg check, 6% portfolio heat cap, rolling edge decay t-stat, and categorical event gating.</string>
+    <string name="crypto2_refresh_peg_desc">Refresh live USDT and USDC stablecoin peg quotes from Kraken</string>
+    <string name="crypto2_backtest_title">9-VARIANT GRID BACKTEST (DSR &amp; PBO)</string>
+    <string name="crypto2_backtest_cta">RUN 9-VARIANT CRYPTO BACKTEST</string>
+    <string name="crypto2_backtest_running">RUNNING 9-VARIANT GRID…</string>
+    <string name="crypto2_backtest_pass_note">Passed Net Sharpe &gt; 1.0, DSR &gt; 0.95, and PBO &lt; 0.50 after fees &amp; slippage. Surviving Kraken pairs represent an upper bound.</string>
+    <string name="crypto2_backtest_fail_note">Net Sharpe &lt; 1.0 or DSR/PBO below gate after fees &amp; slippage — lower turnover is required. Surviving pairs are an upper bound.</string>
+
+    <!-- Main Market Scan Status Dashboard -->
+    <string name="dashboard_status_title">MARKET SCAN</string>
+    <string name="dashboard_status_scanning">SCANNING</string>
+    <string name="dashboard_status_live">LIVE</string>
+    <string name="dashboard_status_crypto_live">24/7 LIVE</string>
+    <string name="dashboard_status_demo">DEMO</string>
+    <string name="dashboard_status_ready">Ready to scan</string>
+    <string name="dashboard_refresh_desc">Refresh Market Scan status, regime, signals, and positions</string>
+    <string name="dashboard_active_regime_label">ACTIVE REGIME</string>
+    <string name="dashboard_active_signals_label">ACTIVE SIGNALS</string>
+    <string name="dashboard_positions_header">CURRENT POSITIONS (%1$d)</string>
+    <string name="dashboard_bot_running">AUTO ON</string>
+    <string name="dashboard_bot_paused">AUTO OFF</string>
+    <string name="dashboard_bot_halted">HALTED</string>
+    <string name="dashboard_equity_label">PAPER EQUITY</string>
+    <string name="dashboard_upnl_label">UNREALIZED P&amp;L</string>
+    <string name="dashboard_positions_flat_title">No open positions</string>
+    <string name="dashboard_positions_flat_subtitle">Flat · %1$s virtual buying power available</string>
+    <string name="dashboard_positions_more">+%1$d more open positions in Portfolio</string>
+    <string name="dashboard_open_trade_cta">TRADE</string>
+    <string name="dashboard_view_portfolio_cta">PORTFOLIO</string>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "name": "Market Scan",
+  "description": "Quantitative equity signal scanner, market regime detector, AI news catalyst scorer, and paper trading simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
